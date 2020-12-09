@@ -30,16 +30,23 @@ request.onload= function(){
 
 
     //4.Print the total population of countries using reduce function 
-    var a = []
-    for(i in data){
-        let b = a.push(data[i].population)   
-    }
-    var total = a.reduce(function(result,item){return result+item},0);
+  
+    var total = data.reduce(function(result,item){return result+item.population},0);
     console.log(total)
 
-    //5.Print the country which use US Dollars as currency.
+    //5.Print the country which use US Dollars as currency. 
 
-    var us = data.filter(ele=>ele.currencies[0].code==="USD");
-    console.log(us)
+    var usd = data.filter((item) => {
+        let flag = false
+        item.currencies.forEach(element => {
+            if (element.code === "USD")
+                flag = true;
+        });
+        if (flag == true)
+            return true;
+        else
+            return false;
+    });
+    console.log(usd);
 
 }
