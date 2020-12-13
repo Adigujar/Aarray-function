@@ -12,6 +12,26 @@ a([1,2,3,4,5,6,7])
 //IIFE
 (function(odd){for (var i=0;i<=odd.length;i++){if(i%2 !==0){console.log(i)}}})([1,2,3,4,5,6,7])
 
+//2.Convert all the strings to title caps in a string array.
+//anonymous function
+var caps = function(str){
+   var temp=[];
+    for (let i=0;i<str.length;i++){
+        var sep =str[i].split("");
+        var caps=sep[0].toUpperCase();
+        sep[0]=caps;
+        var cat = "";
+        for (var j=0;j<sep.length;j++){
+            cat += sep[j];
+        }temp.push(cat);
+    }console.log(temp);
+}
+caps(["cat","dog","fish"])
+
+//IIFE
+(function(str){var temp=[];for (let i=0;i<str.length;i++){var sep =str[i].split(""); var caps=sep[0].toUpperCase();sep[0]=caps;var cat = [""];for (var j=0;j<sep.length;j++){cat += sep[j];}temp.push(cat);}console.log(temp);
+    })(["cat","dog","fish"])
+
 //3. Sum of all numbers in an array
 //anonymous function
 var a = function(sum){
