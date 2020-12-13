@@ -60,7 +60,7 @@ a([1,2,3,4,5,6,7])
 //IIFE
 (function(prime){var output =[2]; for (var i=0;i<=prime.length;i++){if(i%2 !==0){output.push(i)}}console.log(output)})([1,2,3,4,5,6,7])
 
-//5.Return all the palindromes in an array
+//4.Return all the palindromes in an array
 //anonymous function
 var a = function(pali){
     var output =[];
@@ -104,3 +104,18 @@ var a = function(list1,list2){
     }})([10,20],[30,40])
 
     //7.Remove duplicates from an array
+    //anonymous function
+    var duplicate = function(arr){
+        var temp =[];
+        for(var i=0;i<arr.length;i++){
+            if(!temp.includes(arr[i])){
+                temp.push(arr[i]);
+            }
+        }console.log(temp)
+    };
+    duplicate([1,2,3,1,4])
+
+
+    //IIFE
+    (function(arr){var temp =[];for(var i=0;i<arr.length;i++){if(!temp.includes(arr[i])){temp.push(arr[i]);}}console.log(temp)})([1,2,3,1,4])
+
