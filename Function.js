@@ -138,6 +138,28 @@ var a = function(list1,list2){
     //IIFE
     (function(arr){var temp =[];for(var i=0;i<arr.length;i++){if(!temp.includes(arr[i])){temp.push(arr[i]);}}console.log(temp)})([1,2,3,1,4])
 
+    //8.Rotate an array by k times and return the rotated array.
+    //anonymous function
+    function rotateArray(nums,k) {
+        if(k > nums.length) 
+            k=k%nums.length;
+        var result = [];
+        for(var i=0; i < k; i++){
+            result[i] = nums[nums.length-k+i];
+        }
+        var j=0;
+        for(var z=k; z<nums.length; z++){
+            result[z] = nums[j];
+            j++;
+        }
+        nums = result.slice();
+        console.log(nums);
+    }
+    rotateArray([1,2,3,4,5],7)
+    
+    //IIFE
+    (function(nums,k){if(k > nums.length){k=k%nums.length}var result = [];for(var i=0; i < k; i++){result[i] = nums[nums.length-k+i];}var j=0;for(var z=k; z<nums.length; z++){result[z] = nums[j];j++;}nums = result.slice();console.log(nums);})([1,2,3,4,5],8)
+
 
 
 
