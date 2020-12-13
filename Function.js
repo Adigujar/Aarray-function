@@ -119,3 +119,25 @@ var a = function(list1,list2){
     //IIFE
     (function(arr){var temp =[];for(var i=0;i<arr.length;i++){if(!temp.includes(arr[i])){temp.push(arr[i]);}}console.log(temp)})([1,2,3,1,4])
 
+
+
+
+
+pali
+//anonymous function
+var pali = function(arr){
+    var temp =[];
+    var output = [];
+    for(var i=0;i<arr.length;i++){
+        var sp = arr[i].split("");
+        var rev = sp.reverse();
+        var jo = rev.join("");
+        temp.push(jo);
+    }for(var j=0;j<arr.length;j++){
+        if(arr[i]===temp[i]){
+          output.push(arr[i])  
+        }
+    }console.log(output)
+};
+pali(["oy1o","madam","adi"])
+
