@@ -79,8 +79,27 @@ var a = function(pali){
 a(['lol','2002','mic','madam'])
 
 //IIFE
-(function(pali){var output =[];var copy =[]; for (var i=0;i<pali.length;i++)
-{ var b = pali[i];copy.push(pali[i]);var rev = b.split("");let c = rev.reverse();let d=c.join("");if(copy[i]==d){output.push(b)}}console.log(output)})(['lol','2002','mic','madam'])
+(function(pali){var output =[];var copy =[]; for (var i=0;i<pali.length;i++){ var b = pali[i];copy.push(pali[i]);var rev = b.split("");let c = rev.reverse();let d=c.join("");if(copy[i]==d){output.push(b)}}console.log(output)})(['lol','2002','mic','madam'])
+
+//5.Return all the palindromes in an array.
+//anonymous function
+var palindromes = function(arr){
+    var temp =[];
+    var output = [];
+    for(var i=0;i<arr.length;i++){
+        var sp = arr[i].split("");
+        var rev = sp.reverse();
+        var jo = rev.join("");
+        temp.push(jo);
+        if(arr[i]===temp[i]){
+           output.push(arr[i])  
+        }
+    }console.log(output)
+};
+pali(["oy1o","madam","adi"])
+
+//IIFE
+(function(palindeomes){var temp =[];var output = [];for(var i=0;i<arr.length;i++){var sp = arr[i].split("");var rev = sp.reverse();var jo = rev.join("");temp.push(jo);if(arr[i]===temp[i]){output.push(arr[i])}}console.log(output)})(["oy1o","madam","adi"])
 
 //6.Return median of two sorted arrays of same size
 //anonymous function
@@ -123,21 +142,5 @@ var a = function(list1,list2){
 
 
 
-pali
-//anonymous function
-var pali = function(arr){
-    var temp =[];
-    var output = [];
-    for(var i=0;i<arr.length;i++){
-        var sp = arr[i].split("");
-        var rev = sp.reverse();
-        var jo = rev.join("");
-        temp.push(jo);
-    }for(var j=0;j<arr.length;j++){
-        if(arr[i]===temp[i]){
-          output.push(arr[i])  
-        }
-    }console.log(output)
-};
-pali(["oy1o","madam","adi"])
+
 
